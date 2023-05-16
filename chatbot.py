@@ -3,7 +3,7 @@ from streamlit_chat import message
 import requests
 
 st.set_page_config(
-    page_title="Streamlit Chat - Demo",
+    page_title="Globtech Chat - Demo",
     page_icon=":robot:"
 )
 
@@ -11,6 +11,7 @@ API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-
 headers = {"Authorization": st.secrets['API_KEY']}
 
 st.header("Streamlit Chat - Demo")
+st.markdown("[Github](https://github.com/phsilveira/chatbot)")
 
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
